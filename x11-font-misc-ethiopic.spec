@@ -3,6 +3,7 @@ Version: 1.0.0
 Release: %mkrel 6
 Summary: Xorg X11 font misc-ethiopic
 Group: Development/X11
+BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 URL: http://xorg.freedesktop.org
 Source: http://xorg.freedesktop.org/releases/individual/font/font-misc-ethiopic-%{version}.tar.bz2
 License: MIT
