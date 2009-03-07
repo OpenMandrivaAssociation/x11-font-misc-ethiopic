@@ -1,6 +1,6 @@
 Name: x11-font-misc-ethiopic
 Version: 1.0.0
-Release: %mkrel 7
+Release: %mkrel 8
 Summary: Xorg X11 font misc-ethiopic
 Group: Development/X11
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
