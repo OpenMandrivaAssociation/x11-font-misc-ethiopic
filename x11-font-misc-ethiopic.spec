@@ -1,6 +1,6 @@
 Name: x11-font-misc-ethiopic
-Version: 1.0.0
-Release: %mkrel 8
+Version: 1.0.1
+Release: %mkrel 1
 Summary: Xorg X11 font misc-ethiopic
 Group: Development/X11
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
@@ -23,9 +23,11 @@ Xorg X11 font misc-ethiopic
 %setup -q -n font-misc-ethiopic-%{version}
 
 %build
-%configure2_5x	--x-includes=%{_includedir}\
-		--x-libraries=%{_libdir} \
-      --with-otf-fontdir=%_datadir/fonts/OTF --with-ttf-fontdir=%_datadir/fonts/TTF
+./configure --prefix=/usr \
+            --x-includes=%{_includedir}\
+            --x-libraries=%{_libdir} \
+            --with-otf-fontdir=%_datadir/fonts/OTF \
+	    --with-ttf-fontdir=%_datadir/fonts/TTF
 
 %make
 
