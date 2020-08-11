@@ -29,7 +29,7 @@ Xorg X11 font misc-ethiopic.
 %make_build
 
 %install
-%makeinstall
+%make_install
 rm -f %{buildroot}%_datadir/fonts/OTF/fonts.dir
 rm -f %{buildroot}%_datadir/fonts/OTF/fonts.scale
 rm -f %{buildroot}%_datadir/fonts/TTF/fonts.dir
