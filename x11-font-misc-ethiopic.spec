@@ -1,6 +1,6 @@
 Name: x11-font-misc-ethiopic
-Version: 1.0.3
-Release: 15
+Version: 1.0.4
+Release: 1
 Summary: Xorg X11 font misc-ethiopic
 Group: Development/X11
 URL: http://xorg.freedesktop.org
@@ -16,20 +16,20 @@ Requires(post): mkfontscale
 Requires(postun): mkfontscale
 
 %description
-Xorg X11 font misc-ethiopic
+Xorg X11 font misc-ethiopic.
 
 %prep
-%setup -q -n font-misc-ethiopic-%{version}
+%autosetup -n font-misc-ethiopic-%{version} -p1
 
 %build
 %configure \
 	--with-ttf-fontdir=%_datadir/fonts/TTF \
 	--with-otf-fontdir=%_datadir/fonts/OTF   
 
-%make
+%make_build
 
 %install
-%makeinstall_std
+%makeinstall
 rm -f %{buildroot}%_datadir/fonts/OTF/fonts.dir
 rm -f %{buildroot}%_datadir/fonts/OTF/fonts.scale
 rm -f %{buildroot}%_datadir/fonts/TTF/fonts.dir
